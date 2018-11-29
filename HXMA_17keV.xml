@@ -1,0 +1,696 @@
+<?xml version="1.0"?>
+<Project>
+<Beams type="prop">
+	<None type="flat"></None>
+	<wiggler01beamGlobal01 type="flat"></wiggler01beamGlobal01>
+	<rectangularAperture01beamLocal03 type="flat"></rectangularAperture01beamLocal03>
+	<rectangularAperture01beamLocal01 type="flat"></rectangularAperture01beamLocal01>
+	<bentFlatMirror01beamGlobal01 type="flat"></bentFlatMirror01beamGlobal01>
+	<bentFlatMirror01beamLocal01 type="flat"></bentFlatMirror01beamLocal01>
+	<dcM01beamGlobal01 type="flat"></dcM01beamGlobal01>
+	<dcM01beamLocal101 type="flat"></dcM01beamLocal101>
+	<dcM01beamLocal201 type="flat"></dcM01beamLocal201>
+	<toroidMirror01beamGlobal01 type="flat"></toroidMirror01beamGlobal01>
+	<toroidMirror01beamLocal01 type="flat"></toroidMirror01beamLocal01>
+	<rectangularAperture01beamLocal02 type="flat"></rectangularAperture01beamLocal02>
+	<roundAperture01beamLocal01 type="flat"></roundAperture01beamLocal01>
+	<screen01beamLocal02 type="flat"></screen01beamLocal02>
+	<lauePlate01beamGlobal01 type="flat"></lauePlate01beamGlobal01>
+	<lauePlate01beamLocal01 type="flat"></lauePlate01beamLocal01>
+	<screen01beamLocal01 type="flat"></screen01beamLocal01>
+</Beams>
+<Materials type="prop">
+	<Si111 type="value">
+		<properties type="prop">
+			<tK type="param">100</tK>
+			<hkl type="param">[1, 1, 1]</hkl>
+			<d type="param">0</d>
+			<V type="param">None</V>
+			<elements type="param">Si</elements>
+			<quantities type="param">None</quantities>
+			<rho type="param">0</rho>
+			<t type="param">None</t>
+			<factDW type="param">1.0</factDW>
+			<geom type="param">Bragg reflected</geom>
+			<table type="param">Chantler</table>
+			<name type="param">None</name>
+		</properties>
+		<_object type="object">xrt.backends.raycing.materials.CrystalSi</_object>
+	</Si111>
+	<Si220 type="value">
+		<properties type="prop">
+			<tK type="param">100</tK>
+			<hkl type="param">[2, 2, 0]</hkl>
+			<d type="param">0</d>
+			<V type="param">None</V>
+			<elements type="param">Si</elements>
+			<quantities type="param">None</quantities>
+			<rho type="param">2.33</rho>
+			<t type="param">None</t>
+			<factDW type="param">1.0</factDW>
+			<geom type="param">Bragg reflected</geom>
+			<table type="param">Chantler</table>
+			<name type="param">None</name>
+		</properties>
+		<_object type="object">xrt.backends.raycing.materials.CrystalSi</_object>
+	</Si220>
+	<Rh type="value">
+		<properties type="prop">
+			<elements type="param">Rh</elements>
+			<quantities type="param">None</quantities>
+			<kind type="param">mirror</kind>
+			<rho type="param">12.41</rho>
+			<t type="param">None</t>
+			<table type="param">Chantler total</table>
+			<efficiency type="param">None</efficiency>
+			<efficiencyFile type="param">None</efficiencyFile>
+			<name type="param">None</name>
+		</properties>
+		<_object type="object">xrt.backends.raycing.materials.Material</_object>
+	</Rh>
+	<Pt type="value">
+		<properties type="prop">
+			<elements type="param">Pt</elements>
+			<quantities type="param">None</quantities>
+			<kind type="param">mirror</kind>
+			<rho type="param">21.45</rho>
+			<t type="param">None</t>
+			<table type="param">Chantler total</table>
+			<efficiency type="param">None</efficiency>
+			<efficiencyFile type="param">None</efficiencyFile>
+			<name type="param">None</name>
+		</properties>
+		<_object type="object">xrt.backends.raycing.materials.Material</_object>
+	</Pt>
+	<Si type="value">
+		<properties type="prop">
+			<elements type="param">Si</elements>
+			<quantities type="param">None</quantities>
+			<kind type="param">auto</kind>
+			<rho type="param">2.33</rho>
+			<t type="param">None</t>
+			<table type="param">Chantler total</table>
+			<efficiency type="param">None</efficiency>
+			<efficiencyFile type="param">None</efficiencyFile>
+			<name type="param">Si Bulk</name>
+		</properties>
+		<_object type="object">xrt.backends.raycing.materials.Material</_object>
+	</Si>
+	<RhOnSi type="value">
+		<properties type="prop">
+			<coating type="param">Rh</coating>
+			<cThickness type="param">30</cThickness>
+			<surfaceRoughness type="param">3</surfaceRoughness>
+			<substrate type="param">Si</substrate>
+			<substRoughness type="param">3</substRoughness>
+			<name type="param">Rhodium on Silicon</name>
+		</properties>
+		<_object type="object">xrt.backends.raycing.materials.Coated</_object>
+	</RhOnSi>
+	<Si220harm type="value">
+		<properties type="prop">
+			<Nmax type="param">2</Nmax>
+			<name type="param">Si220 with harmonics</name>
+			<hkl type="param">[2, 2, 0]</hkl>
+			<a type="param">5.41949</a>
+			<b type="param">None</b>
+			<c type="param">None</c>
+			<alpha type="param">90</alpha>
+			<beta type="param">90</beta>
+			<gamma type="param">90</gamma>
+			<atoms type="param">[14, 14, 14, 14, 14, 14, 14, 14]</atoms>
+			<atomsXYZ type="param">[[0.0, 0.0, 0.0], [0.0, 0.5, 0.5], [0.5, 0.5, 0.0], [0.5, 0.0, 0.5], [0.25, 0.25, 0.25], [0.25, 0.75, 0.75], [0.75, 0.25, 0.75], [0.75, 0.75, 0.25]]</atomsXYZ>
+			<atomsFraction type="param">None</atomsFraction>
+			<tK type="param">100</tK>
+			<t type="param">None</t>
+			<factDW type="param">1.0</factDW>
+			<geom type="param">Bragg reflected</geom>
+			<table type="param">Chantler total</table>
+		</properties>
+		<_object type="object">xrt.backends.raycing.materials.CrystalHarmonics</_object>
+	</Si220harm>
+	<LFS type="value">
+		<properties type="prop">
+			<chi type="param">[0, 0.5*np.pi]</chi>
+			<name type="param">Lithium Iron Silicate</name>
+			<hkl type="param">[2, 0, 2]</hkl>
+			<a type="param">6.27758</a>
+			<b type="param">5.35136</b>
+			<c type="param">4.97208</c>
+			<alpha type="param">90</alpha>
+			<beta type="param">90</beta>
+			<gamma type="param">90</gamma>
+			<atoms type="param">[28, 28, 14, 14, 3, 3, 3, 3, 8, 8, 8, 8, 8, 8, 8, 8]</atoms>
+			<atomsXYZ type="param">[[0.0, 0.17194, 0.5], [0.5, 0.82916, 1.0], [0.0, 0.83175, 0.00943], [0.5, 0.17935, 0.5], [0.24615, 0.33081, 0.00692], [0.76495, 0.33081, 0.00692], [0.24615, 0.66919, 0.50692], [0.76495, 0.66919, 0.50692], [0.0, 0.12537, 0.92156], [0.5, 0.87463, 0.42156], [0.21837, 0.68523, 0.89528], [0.78163, 0.68532,0.89528], [0.71837, 0.31477, 0.39528], [0.28163, 0.31477, 0.39528], [0.5, 0.17326, 0.84733], [0.0, 0.82674, 0.34733 ]]</atomsXYZ>
+			<atomsFraction type="param">None</atomsFraction>
+			<tK type="param">0</tK>
+			<t type="param">None</t>
+			<factDW type="param">1.0</factDW>
+			<geom type="param">Laue transmitted</geom>
+			<table type="param">Chantler total</table>
+		</properties>
+		<_object type="object">xrt.backends.raycing.materials.Powder</_object>
+	</LFS>
+</Materials>
+<HXMA type="value">
+	<properties type="prop">
+		<azimuth type="param">0.0</azimuth>
+		<height type="param">0.0</height>
+		<alignE type="param">10000</alignE>
+	</properties>
+	<_object type="object">xrt.backends.raycing.BeamLine</_object>
+	<SuperconductingWiggler type="value">
+		<properties type="prop">
+			<bl type="param">HXMA</bl>
+			<name type="param">wiggler</name>
+			<center type="param">(0, 0, 0)</center>
+			<pitch type="param">0</pitch>
+			<yaw type="param">0</yaw>
+			<nrays type="param">200000</nrays>
+			<eE type="param">2.9</eE>
+			<eI type="param">0.25</eI>
+			<eEspread type="param">0.0</eEspread>
+			<eSigmaX type="param">None</eSigmaX>
+			<eSigmaZ type="param">None</eSigmaZ>
+			<eEpsilonX type="param">18.1</eEpsilonX>
+			<eEpsilonZ type="param">0.0362</eEpsilonZ>
+			<betaX type="param">9.1</betaX>
+			<betaZ type="param">2.8</betaZ>
+			<xPrimeMax type="param">1</xPrimeMax>
+			<zPrimeMax type="param">0.375</zPrimeMax>
+			<distE type="param">eV</distE>
+			<eMin type="param">7111.75</eMin>
+			<eMax type="param">7112.25</eMax>
+			<eN type="param">100</eN>
+			<K type="param">5.897482114
+</K>
+			<period type="param">33</period>
+			<n type="param">31</n>
+			<filamentBeam type="param">False</filamentBeam>
+			<uniformRayDensity type="param">False</uniformRayDensity>
+			<nx type="param">25</nx>
+			<nz type="param">25</nz>
+		</properties>
+		<_object type="object">xrt.backends.raycing.sources.Wiggler</_object>
+		<shine type="prop">
+			<parameters type="prop">
+				<toGlobal type="param">True</toGlobal>
+				<withAmplitudes type="param">True</withAmplitudes>
+				<fixedEnergy type="param">False</fixedEnergy>
+				<accuBeam type="param">None</accuBeam>
+			</parameters>
+			<_object type="object">xrt.backends.raycing.sources.Wiggler.shine</_object>
+			<output type="prop">
+				<beamGlobal type="param">wiggler01beamGlobal01</beamGlobal>
+			</output>
+		</shine>
+	</SuperconductingWiggler>
+	<WB_Slits type="value">
+		<properties type="prop">
+			<bl type="param">HXMA</bl>
+			<name type="param">None</name>
+			<center type="param">[0, 14728.75, 0]</center>
+			<kind type="param">['left', 'right', 'bottom', 'top']</kind>
+			<opening type="param">[-4, 4, -1.5, 1.5]</opening>
+			<alarmLevel type="param">None</alarmLevel>
+		</properties>
+		<_object type="object">xrt.backends.raycing.apertures.RectangularAperture</_object>
+		<propagate type="prop">
+			<parameters type="prop">
+				<beam type="param">wiggler01beamGlobal01</beam>
+				<needNewGlobal type="param">False</needNewGlobal>
+			</parameters>
+			<_object type="object">xrt.backends.raycing.apertures.RectangularAperture.propagate</_object>
+			<output type="prop">
+				<beamLocal type="param">rectangularAperture01beamLocal03</beamLocal>
+			</output>
+		</propagate>
+	</WB_Slits>
+	<FM1 type="value">
+		<properties type="prop">
+			<bl type="param">HXMA</bl>
+			<name type="param">Fixed Mask 1</name>
+			<center type="param">[0, 15345.75, 0.011073377860813563]</center>
+			<kind type="param">['left', 'right', 'bottom', 'top']</kind>
+			<opening type="param">[-8, 8, -3, 3]</opening>
+			<alarmLevel type="param">None</alarmLevel>
+		</properties>
+		<_object type="object">xrt.backends.raycing.apertures.RectangularAperture</_object>
+		<propagate type="prop">
+			<parameters type="prop">
+				<beam type="param">wiggler01beamGlobal01</beam>
+				<needNewGlobal type="param">False</needNewGlobal>
+			</parameters>
+			<_object type="object">xrt.backends.raycing.apertures.RectangularAperture.propagate</_object>
+			<output type="prop">
+				<beamLocal type="param">rectangularAperture01beamLocal01</beamLocal>
+			</output>
+		</propagate>
+	</FM1>
+	<Collimating_Mirror type="value">
+		<properties type="prop">
+			<bl type="param">HXMA</bl>
+			<name type="param">collimatingMirror</name>
+			<center type="param">[0, 17250.0,0]</center>
+			<pitch type="param">0.0026</pitch>
+			<roll type="param">0</roll>
+			<yaw type="param">0</yaw>
+			<positionRoll type="param">0</positionRoll>
+			<extraPitch type="param">0</extraPitch>
+			<extraRoll type="param">0</extraRoll>
+			<extraYaw type="param">0</extraYaw>
+			<rotationSequence type="param">RzRyRx</rotationSequence>
+			<extraRotationSequence type="param">RzRyRx</extraRotationSequence>
+			<surface type="param">None</surface>
+			<material type="param">RhOnSi</material>
+			<alpha type="param">None</alpha>
+			<limPhysX type="param">[-20.0, 20.0]</limPhysX>
+			<limOptX type="param">[-20.0, 20.0]</limOptX>
+			<limPhysY type="param">[-700.00, 700.00]</limPhysY>
+			<limOptY type="param">None</limOptY>
+			<isParametric type="param">False</isParametric>
+			<shape type="param">rect</shape>
+			<gratingDensity type="param">None</gratingDensity>
+			<order type="param">None</order>
+			<shouldCheckCenter type="param">False</shouldCheckCenter>
+			<R type="param">14.2519e06</R>
+			<alarmLevel type="param">None</alarmLevel>
+			<targetOpenCL type="param">None</targetOpenCL>
+			<precisionOpenCL type="param">float64</precisionOpenCL>
+		</properties>
+		<_object type="object">xrt.backends.raycing.oes.BentFlatMirror</_object>
+		<reflect type="prop">
+			<parameters type="prop">
+				<beam type="param">wiggler01beamGlobal01</beam>
+				<needLocal type="param">True</needLocal>
+				<noIntersectionSearch type="param">False</noIntersectionSearch>
+				<returnLocalAbsorbed type="param">None</returnLocalAbsorbed>
+			</parameters>
+			<_object type="object">xrt.backends.raycing.oes.BentFlatMirror.reflect</_object>
+			<output type="prop">
+				<beamGlobal type="param">bentFlatMirror01beamGlobal01</beamGlobal>
+				<beamLocal type="param">bentFlatMirror01beamLocal01</beamLocal>
+			</output>
+		</reflect>
+	</Collimating_Mirror>
+	<Mono type="value">
+		<properties type="prop">
+			<bl type="param">HXMA</bl>
+			<name type="param">mono</name>
+			<center type="param">[0, 20695.0, 20]</center>
+			<bragg type="param">[7112]</bragg>
+			<pitch type="param">0</pitch>
+			<roll type="param">0</roll>
+			<yaw type="param">0</yaw>
+			<positionRoll type="param">0</positionRoll>
+			<extraPitch type="param">0</extraPitch>
+			<extraRoll type="param">0</extraRoll>
+			<extraYaw type="param">0</extraYaw>
+			<rotationSequence type="param">RzRyRx</rotationSequence>
+			<extraRotationSequence type="param">RzRyRx</extraRotationSequence>
+			<surface type="param">None</surface>
+			<material type="param">Si111</material>
+			<material2 type="param">Si111</material2>
+			<alpha type="param">None</alpha>
+			<limPhysX type="param">[-20.0, 20.0]</limPhysX>
+			<limOptX type="param">[-20,20]</limOptX>
+			<limPhysY type="param">[-72.3913, 3.8087]</limPhysY>
+			<limOptY type="param">[-72.3919, 3.8087]</limOptY>
+			<limPhysX2 type="param">[-20.0, 20.0]</limPhysX2>
+			<limPhysY2 type="param">[-1.1951, 94.0549]</limPhysY2>
+			<limOptX2 type="param">None</limOptX2>
+			<limOptY2 type="param">None</limOptY2>
+			<isParametric type="param">False</isParametric>
+			<shape type="param">rect</shape>
+			<gratingDensity type="param">None</gratingDensity>
+			<order type="param">None</order>
+			<shouldCheckCenter type="param">False</shouldCheckCenter>
+			<cryst1roll type="param">0</cryst1roll>
+			<cryst2roll type="param">0</cryst2roll>
+			<cryst2pitch type="param">0.00000</cryst2pitch>
+			<alarmLevel type="param">None</alarmLevel>
+			<cryst2finePitch type="param">0</cryst2finePitch>
+			<cryst2perpTransl type="param">34</cryst2perpTransl>
+			<cryst2longTransl type="param">40</cryst2longTransl>
+			<fixedOffset type="param">0</fixedOffset>
+			<targetOpenCL type="param">None</targetOpenCL>
+			<precisionOpenCL type="param">float64</precisionOpenCL>
+		</properties>
+		<_object type="object">xrt.backends.raycing.oes.DCM</_object>
+		<double_reflect type="prop">
+			<parameters type="prop">
+				<beam type="param">bentFlatMirror01beamGlobal01</beam>
+				<needLocal type="param">True</needLocal>
+				<fromVacuum1 type="param">True</fromVacuum1>
+				<fromVacuum2 type="param">True</fromVacuum2>
+				<returnLocalAbsorbed type="param">None</returnLocalAbsorbed>
+			</parameters>
+			<_object type="object">xrt.backends.raycing.oes.DCM.double_reflect</_object>
+			<output type="prop">
+				<beamGlobal type="param">dcM01beamGlobal01</beamGlobal>
+				<beamLocal1 type="param">dcM01beamLocal101</beamLocal1>
+				<beamLocal2 type="param">dcM01beamLocal201</beamLocal2>
+			</output>
+		</double_reflect>
+	</Mono>
+	<Toriodal_Mirror type="value">
+		<properties type="prop">
+			<bl type="param">HXMA</bl>
+			<name type="param">Toroidal Mirror</name>
+			<center type="param">[0, 22841.00, 96.5]</center>
+			<pitch type="param">-0.0025</pitch>
+			<roll type="param">0</roll>
+			<yaw type="param">0</yaw>
+			<positionRoll type="param">np.pi</positionRoll>
+			<extraPitch type="param">0</extraPitch>
+			<extraRoll type="param">0</extraRoll>
+			<extraYaw type="param">0</extraYaw>
+			<rotationSequence type="param">RzRyRx</rotationSequence>
+			<extraRotationSequence type="param">RzRyRx</extraRotationSequence>
+			<surface type="param">None</surface>
+			<material type="param">RhOnSi</material>
+			<alpha type="param">None</alpha>
+			<limPhysX type="param">[-30.0, 30.0]</limPhysX>
+			<limOptX type="param">[-30, 30]</limOptX>
+			<limPhysY type="param">[-700.0, 700.0]</limPhysY>
+			<limOptY type="param">[-700.0, 700.0]</limOptY>
+			<isParametric type="param">False</isParametric>
+			<shape type="param">rect</shape>
+			<gratingDensity type="param">None</gratingDensity>
+			<order type="param">None</order>
+			<shouldCheckCenter type="param">False</shouldCheckCenter>
+			<R type="param">9.6296e06</R>
+			<r type="param">46.2</r>
+			<alarmLevel type="param">None</alarmLevel>
+			<targetOpenCL type="param">None</targetOpenCL>
+			<precisionOpenCL type="param">float64</precisionOpenCL>
+		</properties>
+		<_object type="object">xrt.backends.raycing.oes.ToroidMirror</_object>
+		<reflect type="prop">
+			<parameters type="prop">
+				<beam type="param">dcM01beamGlobal01</beam>
+				<needLocal type="param">True</needLocal>
+				<noIntersectionSearch type="param">False</noIntersectionSearch>
+				<returnLocalAbsorbed type="param">None</returnLocalAbsorbed>
+			</parameters>
+			<_object type="object">xrt.backends.raycing.oes.ToroidMirror.reflect</_object>
+			<output type="prop">
+				<beamGlobal type="param">toroidMirror01beamGlobal01</beamGlobal>
+				<beamLocal type="param">toroidMirror01beamLocal01</beamLocal>
+			</output>
+		</reflect>
+	</Toriodal_Mirror>
+	<JJ_Xray type="value">
+		<properties type="prop">
+			<bl type="param">HXMA</bl>
+			<name type="param">None</name>
+			<center type="param">[0, 38789, 106.30364431986891]</center>
+			<kind type="param">['left', 'right', 'bottom', 'top']</kind>
+			<opening type="param">[-0.5,0.5, -0.5, 0.5]</opening>
+			<alarmLevel type="param">None</alarmLevel>
+		</properties>
+		<_object type="object">xrt.backends.raycing.apertures.RectangularAperture</_object>
+		<propagate type="prop">
+			<parameters type="prop">
+				<beam type="param">toroidMirror01beamGlobal01</beam>
+				<needNewGlobal type="param">False</needNewGlobal>
+			</parameters>
+			<_object type="object">xrt.backends.raycing.apertures.RectangularAperture.propagate</_object>
+			<output type="prop">
+				<beamLocal type="param">rectangularAperture01beamLocal02</beamLocal>
+			</output>
+		</propagate>
+	</JJ_Xray>
+	<Cleanup_Pinhole type="value">
+		<properties type="prop">
+			<bl type="param">HXMA</bl>
+			<name type="param">cleanup</name>
+			<center type="param">[0, 39700, 106.92017227555775]</center>
+			<alarmLevel type="param">None</alarmLevel>
+			<r type="param">0.5</r>
+		</properties>
+		<_object type="object">xrt.backends.raycing.apertures.RoundAperture</_object>
+		<propagate type="prop">
+			<parameters type="prop">
+				<beam type="param">toroidMirror01beamGlobal01</beam>
+				<needNewGlobal type="param">False</needNewGlobal>
+			</parameters>
+			<_object type="object">xrt.backends.raycing.apertures.RoundAperture.propagate</_object>
+			<output type="prop">
+				<beamLocal type="param">roundAperture01beamLocal01</beamLocal>
+			</output>
+		</propagate>
+	</Cleanup_Pinhole>
+	<Beamspot type="value">
+		<properties type="prop">
+			<bl type="param">HXMA</bl>
+			<name type="param">Beam Spot</name>
+			<center type="param">[0,39788.5, 107.0]</center>
+			<x type="param">auto</x>
+			<z type="param">auto</z>
+			<compressX type="param">None</compressX>
+			<compressZ type="param">None</compressZ>
+		</properties>
+		<_object type="object">xrt.backends.raycing.screens.Screen</_object>
+		<expose type="prop">
+			<parameters type="prop">
+				<beam type="param">toroidMirror01beamGlobal01</beam>
+				<onlyPositivePath type="param">False</onlyPositivePath>
+			</parameters>
+			<_object type="object">xrt.backends.raycing.screens.Screen.expose</_object>
+			<output type="prop">
+				<beamLocal type="param">screen01beamLocal02</beamLocal>
+			</output>
+		</expose>
+	</Beamspot>
+	<Sample type="value">
+		<properties type="prop">
+			<bl type="param">HXMA</bl>
+			<name type="param">None</name>
+			<center type="param">[0,39789, 107.0]</center>
+			<pitch type="param">np.pi*0.5</pitch>
+			<roll type="param">0</roll>
+			<yaw type="param">0</yaw>
+			<positionRoll type="param">0</positionRoll>
+			<extraPitch type="param">0</extraPitch>
+			<extraRoll type="param">0</extraRoll>
+			<extraYaw type="param">0</extraYaw>
+			<rotationSequence type="param">RzRyRx</rotationSequence>
+			<extraRotationSequence type="param">RzRyRx</extraRotationSequence>
+			<surface type="param">None</surface>
+			<material type="param">None</material>
+			<alpha type="param">None</alpha>
+			<limPhysX type="param">[-1000.0, 1000.0]</limPhysX>
+			<limOptX type="param">None</limOptX>
+			<limPhysY type="param">[-1000.0, 1000.0]</limPhysY>
+			<limOptY type="param">None</limOptY>
+			<isParametric type="param">False</isParametric>
+			<shape type="param">rect</shape>
+			<gratingDensity type="param">None</gratingDensity>
+			<order type="param">None</order>
+			<shouldCheckCenter type="param">False</shouldCheckCenter>
+			<alarmLevel type="param">None</alarmLevel>
+			<targetOpenCL type="param">auto</targetOpenCL>
+			<precisionOpenCL type="param">auto</precisionOpenCL>
+		</properties>
+		<_object type="object">xrt.backends.raycing.oes.LauePlate</_object>
+		<reflect type="prop">
+			<parameters type="prop">
+				<beam type="param">toroidMirror01beamGlobal01</beam>
+				<needLocal type="param">True</needLocal>
+				<noIntersectionSearch type="param">False</noIntersectionSearch>
+				<returnLocalAbsorbed type="param">None</returnLocalAbsorbed>
+			</parameters>
+			<_object type="object">xrt.backends.raycing.oes.LauePlate.reflect</_object>
+			<output type="prop">
+				<beamGlobal type="param">lauePlate01beamGlobal01</beamGlobal>
+				<beamLocal type="param">lauePlate01beamLocal01</beamLocal>
+			</output>
+		</reflect>
+	</Sample>
+	<mar345 type="value">
+		<properties type="prop">
+			<bl type="param">HXMA</bl>
+			<name type="param">mar345</name>
+			<center type="param">[0, 40041.2, 107.15467088647455 ]</center>
+			<x type="param">auto</x>
+			<z type="param">auto</z>
+			<compressX type="param">None</compressX>
+			<compressZ type="param">None</compressZ>
+		</properties>
+		<_object type="object">xrt.backends.raycing.screens.Screen</_object>
+		<expose type="prop">
+			<parameters type="prop">
+				<beam type="param">lauePlate01beamGlobal01</beam>
+				<onlyPositivePath type="param">False</onlyPositivePath>
+			</parameters>
+			<_object type="object">xrt.backends.raycing.screens.Screen.expose</_object>
+			<output type="prop">
+				<beamLocal type="param">screen01beamLocal01</beamLocal>
+			</output>
+		</expose>
+	</mar345>
+</HXMA>
+<plots type="value">
+	<Sample type="value">
+		<_object type="object">xrt.plotter.XYCPlot</_object>
+		<beam type="param">screen01beamLocal02</beam>
+		<rayFlag type="param">(1,)</rayFlag>
+		<xaxis type="prop">
+			<_object type="object">xrt.plotter.XYCAxis</_object>
+			<label type="param">x</label>
+			<unit type="param">mm</unit>
+			<factor type="param">None</factor>
+			<data type="param">auto</data>
+			<limits type="param">None</limits>
+			<offset type="param">0</offset>
+			<bins type="param">128</bins>
+			<ppb type="param">2</ppb>
+			<density type="param">histogram</density>
+			<invertAxis type="param">False</invertAxis>
+			<outline type="param">0.5</outline>
+			<fwhmFormatStr type="param">%.1f</fwhmFormatStr>
+		</xaxis>
+		<yaxis type="prop">
+			<_object type="object">xrt.plotter.XYCAxis</_object>
+			<label type="param">z</label>
+			<unit type="param">mm</unit>
+			<factor type="param">None</factor>
+			<data type="param">auto</data>
+			<limits type="param">None</limits>
+			<offset type="param">0</offset>
+			<bins type="param">128</bins>
+			<ppb type="param">2</ppb>
+			<density type="param">histogram</density>
+			<invertAxis type="param">False</invertAxis>
+			<outline type="param">0.5</outline>
+			<fwhmFormatStr type="param">%.1f</fwhmFormatStr>
+		</yaxis>
+		<caxis type="prop">
+			<_object type="object">xrt.plotter.XYCAxis</_object>
+			<label type="param">energy</label>
+			<unit type="param">eV</unit>
+			<factor type="param">None</factor>
+			<data type="param">auto</data>
+			<limits type="param">None</limits>
+			<offset type="param">0</offset>
+			<bins type="param">128</bins>
+			<ppb type="param">2</ppb>
+			<density type="param">histogram</density>
+			<invertAxis type="param">False</invertAxis>
+			<outline type="param">0.5</outline>
+			<fwhmFormatStr type="param">%.1f</fwhmFormatStr>
+		</caxis>
+		<aspect type="param">equal</aspect>
+		<xPos type="param">1</xPos>
+		<yPos type="param">1</yPos>
+		<ePos type="param">1</ePos>
+		<title type="param">Sample</title>
+		<invertColorMap type="param">False</invertColorMap>
+		<negative type="param">False</negative>
+		<fluxKind type="param">total</fluxKind>
+		<fluxUnit type="param">auto</fluxUnit>
+		<fluxFormatStr type="param">auto</fluxFormatStr>
+		<contourLevels type="param">None</contourLevels>
+		<contourColors type="param">None</contourColors>
+		<contourFmt type="param">%.1f</contourFmt>
+		<contourFactor type="param">1.0</contourFactor>
+		<saveName type="param">None</saveName>
+		<persistentName type="param">None</persistentName>
+		<oe type="param">None</oe>
+		<raycingParam type="param">0</raycingParam>
+		<beamState type="param">None</beamState>
+		<beamC type="param">None</beamC>
+	</Sample>
+	<mar345 type="value">
+		<_object type="object">xrt.plotter.XYCPlot</_object>
+		<beam type="param">screen01beamLocal01</beam>
+		<rayFlag type="param">(1,)</rayFlag>
+		<xaxis type="prop">
+			<_object type="object">xrt.plotter.XYCAxis</_object>
+			<label type="param">x</label>
+			<unit type="param">mm</unit>
+			<factor type="param">None</factor>
+			<data type="param">auto</data>
+			<limits type="param">None</limits>
+			<offset type="param">0</offset>
+			<bins type="param">128</bins>
+			<ppb type="param">2</ppb>
+			<density type="param">histogram</density>
+			<invertAxis type="param">False</invertAxis>
+			<outline type="param">0.5</outline>
+			<fwhmFormatStr type="param">%.1f</fwhmFormatStr>
+		</xaxis>
+		<yaxis type="prop">
+			<_object type="object">xrt.plotter.XYCAxis</_object>
+			<label type="param">z</label>
+			<unit type="param">mm</unit>
+			<factor type="param">None</factor>
+			<data type="param">auto</data>
+			<limits type="param">None</limits>
+			<offset type="param">0</offset>
+			<bins type="param">128</bins>
+			<ppb type="param">2</ppb>
+			<density type="param">histogram</density>
+			<invertAxis type="param">False</invertAxis>
+			<outline type="param">0.5</outline>
+			<fwhmFormatStr type="param">%.1f</fwhmFormatStr>
+		</yaxis>
+		<caxis type="prop">
+			<_object type="object">xrt.plotter.XYCAxis</_object>
+			<label type="param">energy</label>
+			<unit type="param">eV</unit>
+			<factor type="param">None</factor>
+			<data type="param">auto</data>
+			<limits type="param">None</limits>
+			<offset type="param">0</offset>
+			<bins type="param">128</bins>
+			<ppb type="param">2</ppb>
+			<density type="param">histogram</density>
+			<invertAxis type="param">False</invertAxis>
+			<outline type="param">0.5</outline>
+			<fwhmFormatStr type="param">%.1f</fwhmFormatStr>
+		</caxis>
+		<aspect type="param">equal</aspect>
+		<xPos type="param">1</xPos>
+		<yPos type="param">1</yPos>
+		<ePos type="param">1</ePos>
+		<title type="param">mar345</title>
+		<invertColorMap type="param">False</invertColorMap>
+		<negative type="param">False</negative>
+		<fluxKind type="param">total</fluxKind>
+		<fluxUnit type="param">auto</fluxUnit>
+		<fluxFormatStr type="param">auto</fluxFormatStr>
+		<contourLevels type="param">None</contourLevels>
+		<contourColors type="param">None</contourColors>
+		<contourFmt type="param">%.1f</contourFmt>
+		<contourFactor type="param">1.0</contourFactor>
+		<saveName type="param">None</saveName>
+		<persistentName type="param">None</persistentName>
+		<oe type="param">None</oe>
+		<raycingParam type="param">0</raycingParam>
+		<beamState type="param">None</beamState>
+		<beamC type="param">None</beamC>
+	</mar345>
+</plots>
+<run_ray_tracing type="prop">
+	<_object type="object">xrt.runner.run_ray_tracing</_object>
+	<plots type="param">plots</plots>
+	<repeats type="param">1</repeats>
+	<updateEvery type="param">1</updateEvery>
+	<pickleEvery type="param">None</pickleEvery>
+	<energyRange type="param">None</energyRange>
+	<backend type="param">raycing</backend>
+	<beamLine type="param">HXMA</beamLine>
+	<threads type="param">1</threads>
+	<processes type="param">1</processes>
+	<generator type="param">None</generator>
+	<generatorArgs type="param">[]</generatorArgs>
+	<generatorKWargs type="param">auto</generatorKWargs>
+	<globalNorm type="param">0</globalNorm>
+	<afterScript type="param">None</afterScript>
+	<afterScriptArgs type="param">[]</afterScriptArgs>
+	<afterScriptKWargs type="param">{}</afterScriptKWargs>
+</run_ray_tracing>
+<description></description>
+</Project>
